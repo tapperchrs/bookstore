@@ -22,7 +22,7 @@ public class Item {
         DriverManager.registerDriver(new ClientDriver());
         Connection con = DriverManager.getConnection(dbURI);
         Statement stmt = con.createStatement();
-        String sql = "select isbn, title, price, coverpic from booksquery where isbn = '" + isbn + "'";
+        String sql = "select isbn, title, price, au_lastname, coverpic from booksquery where isbn = '" + isbn + "'";
         ResultSet rs = stmt.executeQuery(sql);
         rs.next();
         this.ISBN = isbn;
