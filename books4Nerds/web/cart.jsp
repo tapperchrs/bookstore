@@ -102,9 +102,6 @@
                                         <!--<i class="material-icons-outlined button" onClick="removeItem('item0')">delete</i>-->
                                     </p>
                                     <p class="col-md-2"><%= item.getPrice()%></p>
-                                               
-
-
                                 </div>
                             </div>
                             <%
