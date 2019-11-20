@@ -88,7 +88,7 @@
                     <p>Publisher: <%= rs.getString("pub_name")%></p>
                     <div class="col-md-12">
                         <p><a class="btn btn-primary col-md-6" href="book.jsp?isbn=<%= rs.getString("isbn")%>" role="button"><i class="material-icons">info</i></a>
-                            <a class="btn btn-primary col-md-6" href="cart.html" role="button"><i class="material-icons">add_shopping_cart</i></a>
+                            <a class="btn btn-primary col-md-6" href="cart.jsp?isbn=<%=rs.getString("isbn")%>" role="button"><i class="material-icons">add_shopping_cart</i></a>
                         </p>
                     </div>
                 </div>

@@ -10,6 +10,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String itemParam = request.getParameter("isbn");
+    String blank = "";
     String clearParam = request.getParameter("clear");
     ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
     if (itemParam != null) {
@@ -54,7 +55,7 @@
                 %>
                 <h1 class="cart-title">Shopping Cart is Empty</h4>
                     <p>
-                        <a href="results.jsp" class="button">Continue Shopping</a>
+                        <a href="results.jsp?keyword=" class="button">Continue Shopping</a>
                     </p>
                     <%
                     } else {
@@ -69,7 +70,7 @@
                         %>
                         <h1 class="cart-title">Shopping Cart is Empty</h4>
                             <p>
-                                <a href="results.jsp" class="button">Continue Shopping</a>
+                                <a href="results.jsp?keyword=" class="button">Continue Shopping</a>
                             </p>
                             <%
                                 }
