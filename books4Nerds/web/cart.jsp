@@ -61,12 +61,11 @@
                 %>
                 <h1 class="cart-title">Shopping Cart is Empty</h4>
                     <p>
-                        <a href="results.jsp?keyword=" class="button">Continue Shopping</a>
+                    <p style="text-align: center;"><a class="btn btn-primary btn-md" href="results.jsp?keyword=" role="button">Continue Shopping</a></p>
                     </p>
                     <%
                     } else {
                     %>
-                    <p style="text-align: center;" class="cart-title"><a class="btn btn-primary btn-lg" href="checkout.jsp" role="button">Checkout</a></p>            
 
                     <form action="UpdateCartServlet" method="post">
                         <%
@@ -76,11 +75,17 @@
                         %>
                         <h1 class="cart-title">Shopping Cart is Empty</h4>
                             <p>
-                                <a href="results.jsp?keyword=" class="button">Continue Shopping</a>
+                            <p style="text-align: center;"><a class="btn btn-primary btn-md" href="results.jsp?keyword=" role="button">Continue Shopping</a></p>
                             </p>
                             <%
                                 }
+                                if (cart.getItemCount() != 0) {
+
+
                             %>
+
+                            <p style="text-align: center;" class="cart-title"><a class="btn btn-primary btn-lg" href="checkout.jsp" role="button">Checkout</a></p>            
+
                             <div class="labels">
                                 <div class="col-lg-2"></div>
                                 <div class="col-lg-10">
@@ -91,7 +96,7 @@
                                     <div class="col-md-2"></div>
                                 </div>
                             </div>
-                            <%
+                            <%                                }
                                 for (int i = 0; i < itemCount; i++) {
                                     Item item = (Item) items.elementAt(i);
                             %>
@@ -120,10 +125,10 @@
                             </p>
                             <%
                                 }
+
                             %>  
                     </form>
-                    <%
-                        }
+                    <%                        }
                     %>
             </div>
 
