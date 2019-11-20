@@ -49,7 +49,6 @@
         <div class="cart">
             <div class="container">
                 <h1 class="cart-title">Shopping Cart</h1>
-                <h2><%=cart.getStringTotal()%></h2>
                 <%
                     if (cart == null) {
                 %>
