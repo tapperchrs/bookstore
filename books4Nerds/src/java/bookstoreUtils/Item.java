@@ -45,7 +45,7 @@ public class Item {
         return price;
     }
 
-    public String getAu_lastname() {
+    public String getAuthor() {
         return au_lastname;
     }
 

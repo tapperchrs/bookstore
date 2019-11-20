@@ -79,7 +79,6 @@
                                 <div class="col-lg-2"></div>
                                 <div class="col-lg-10">
                                     <p class="col-md-2">Title:</p>
-                                    <p class="col-md-2">Condition:</p>
                                     <p class="col-md-2">Author:</p>
                                     <p class="col-md-2">Quantity:</p>
                                     <p class="col-md-2">Price:</p>
@@ -92,21 +91,18 @@
                             %>
 
                             <div class=" col-md-12 item1">
-                                <div class="itempic col-md-2">
-                                    <img src="<%= item.getCoverpic()%>" alt=""/>
-                                </div>
+                                <div class="itempic col-md-2"><img src="<%= item.getCoverpic()%>" alt=""/></div>
                                 <div class="iteminfo col-md-10">
                                     <p class="col-md-2"><%= item.getTitle()%></p>
-                                    <p class="col-md-2">New</p>
+                                    <p class="col-md-2"><%= item.getAuthor()%></p>
                                     <p class="col-md-2">
                                         <i class="material-icons-outlined button" onClick="increaseQuantity('item<%= i%>')">add_circle_outline</i>
                                         <input type="text" size="2" name="item<%= i%>" id="item<%= i%>" value="<%= item.getQuantity()%>" readonly="readonly" />
                                         <i class="material-icons-outlined button" onClick="decreaseQuantity('item<%= i%>')">remove_circle_outline</i>
                                         <!--<i class="material-icons-outlined button" onClick="removeItem('item0')">delete</i>-->
                                     </p>
-                                    <p class="col-md-2">1&#9660;</p>
                                     <p class="col-md-2"><%= item.getPrice()%></p>
-                                    <p class="col-md-2"><i class="material-icons">remove_shopping_cart</i></p>            
+                                               
 
 
                                 </div>
@@ -116,7 +112,8 @@
                                 if (itemCount != 0) {
                             %>
                             <p style="text-align: right">
-                                <input type="submit" value="Update Cart" class="button"/> <a href="showCart.jsp?clear=true" class="button">Clear Cart</a> <a href="search.jsp" class="button">Continue Shopping</a>
+                                <input type="submit" value="Update Cart" class="button"/> <a href="cart.jsp?clear=true" class="button">Clear Cart</a> 
+                                <a href="results.jsp" class="button">Continue Shopping</a>
                             </p>
                             <%
                                 }

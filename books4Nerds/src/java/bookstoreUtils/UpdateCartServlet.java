@@ -75,7 +75,7 @@ public class UpdateCartServlet extends HttpServlet {
         HttpSession session = request.getSession(true);
         ShoppingCart cart = (ShoppingCart)session.getAttribute("cart");
         if(cart==null){
-            response.sendRedirect("showCart.jsp");
+            response.sendRedirect("cart.jsp");
         }else{
             //We have the cart, let's update it
             int itemCount = cart.getItemCount();
@@ -95,7 +95,7 @@ public class UpdateCartServlet extends HttpServlet {
             //Put the cart back in the session
             session.setAttribute("cart",cart);
             //go look at it!
-            response.sendRedirect("showCart.jsp");
+            response.sendRedirect("cart.jsp");
         }
     }
 
