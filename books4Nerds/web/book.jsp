@@ -31,7 +31,7 @@
         <div class="book">
             <div class="container">
                 <div class="col-lg-4">
-                    <img id="bookpageimg" src="<%= rs.getString("coverpic")%>" alt="Killer Interactive"/>
+                    <img id="bookpageimg" src="<%= rs.getString("coverpic")%>" alt="<%=rs.getString("title") %>"/>
                 </div>
                 <div class="col-lg-8">
                     <h1 class="col-lg-12" id="bookpagetitle"><%= rs.getString("title")%></h1>
@@ -49,7 +49,7 @@
                     <div class="col-lg-12 btns">
                         <div class="col-md-12">
                             <p><a class="btn btn-primary col-md-6" href="checkout.jsp" role="button"><i class="material-icons">payment</i></a>
-                                <a class="btn btn-primary col-md-6" href="cart.jsp?isbn=<%=rs.getString("isbn")%>" role="button"><i class="material-icons">add_shopping_cart</i></a>
+                                <a class="btn btn-primary col-md-6" href="cart.jsp?isbn=<%=isbn%>" role="button"><i class="material-icons">add_shopping_cart</i></a>
                             </p>
                         </div>                       </div>
                 </div>

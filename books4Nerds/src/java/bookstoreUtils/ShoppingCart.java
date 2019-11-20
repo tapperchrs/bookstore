@@ -5,6 +5,7 @@
  */
 package bookstoreUtils;
 
+import java.text.NumberFormat;
 import java.util.*;
 
 /**
@@ -87,5 +88,10 @@ public class ShoppingCart {
             total += unitPrice * quantity;
         }
         return total;
+    }
+    
+    public String getStringTotal() {
+        NumberFormat nf = NumberFormat.getCurrencyInstance();
+        return nf.format(getTotal());
     }
 }
