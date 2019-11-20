@@ -70,7 +70,7 @@
                         <p id="justify"> <%= rs.getString("description")%> </p>
                         <div class="col-md-12">
                             <p><a class="btn btn-primary col-md-5" href="book.jsp?isbn=<%= rs.getString("isbn")%>" role="button"><i class="material-icons">info</i></a>
-                                <a class="btn btn-primary col-md-5" href="cart.jsp" role="button"><i class="material-icons">add_shopping_cart</i></a>
+                                <a class="btn btn-primary col-md-5" href="cart.jsp?isbn=<%=rs.getString("isbn")%>" role="button"><i class="material-icons">add_shopping_cart</i></a>
                             </p>
                         </div>                   
                     </div>

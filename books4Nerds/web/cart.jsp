@@ -51,12 +51,12 @@
             <div class="container">
                 <h1 class="cart-title">Shopping Cart</h1>
                 <%
-                    if(cart != null) {
-                        %>
-                        <h2><%=cart.getStringTotal()%></h2>
+                    if (cart != null) {
+                %>
+                <h2 style="font-family: 'Roboto Slab', cursive; font-size: 22px; font-weight: bold; text-align: center;">Total: <%=cart.getStringTotal()%></h2>
                 <%
-                        }
-                    %>
+                    }
+                %>
                 <%
                     if (cart == null) {
                 %>
@@ -103,9 +103,9 @@
                                     <p class="col-md-2"><%= item.getTitle()%></p>
                                     <p class="col-md-2"><%= item.getAuthor()%></p>
                                     <p class="col-md-2">
-                                        <i class="material-icons-outlined button" onClick="increaseQuantity('item<%= i%>')">add_circle_outline</i>
+                                        <i class="material-icons button" onClick="increaseQuantity('item<%= i%>')">add_circle_outline</i>
                                         <input type="text" size="2" name="item<%= i%>" id="item<%= i%>" value="<%= item.getQuantity()%>" readonly="readonly" />
-                                        <i class="material-icons-outlined button" onClick="decreaseQuantity('item<%= i%>')">remove_circle_outline</i>
+                                        <i class="material-icons button" onClick="decreaseQuantity('item<%= i%>')">remove_circle_outline</i>
                                         <!--<i class="material-icons-outlined button" onClick="removeItem('item0')">delete</i>-->
                                     </p>
                                     <p class="col-md-2"><%= item.getPrice()%></p>
@@ -115,9 +115,9 @@
                                 }
                                 if (itemCount != 0) {
                             %>
-                            <p style="text-align: right">
-                                <input type="submit" value="Update Cart" class="button"/> <a href="cart.jsp?clear=true" class="button">Clear Cart</a> 
-                                <a href="results.jsp" class="button">Continue Shopping</a>
+                            <p style="text-align: center; padding-top: 15px;"><a class="btn btn-primary btn-md" value='Update Cart' type="submit" role="button">Update Cart</a></p>
+                            <p style="text-align: center;"><a class="btn btn-primary btn-md" href="cart.jsp?clear=true" role="button">Clear Cart</a></p>
+                            <p style="text-align: center;"><a class="btn btn-primary btn-md" href="results.jsp?keyword=" role="button">Continue Shopping</a></p>
                             </p>
                             <%
                                 }
