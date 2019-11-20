@@ -10,7 +10,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String itemParam = request.getParameter("isbn");
-    String blank = "";
     String clearParam = request.getParameter("clear");
     ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
     if (itemParam != null) {
@@ -108,7 +107,7 @@
                                         <i class="material-icons button" onClick="decreaseQuantity('item<%= i%>')">remove_circle_outline</i>
                                         <!--<i class="material-icons-outlined button" onClick="removeItem('item0')">delete</i>-->
                                     </p>
-                                    <p class="col-md-2"><%= item.getPrice()%></p>
+                                    <p class="col-md-2">$<%= item.getPrice()%></p>
                                 </div>
                             </div>
                             <%
