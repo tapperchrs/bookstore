@@ -59,10 +59,8 @@
                 <%
                     if (cart == null) {
                 %>
-                <h1 class="cart-title">Shopping Cart is Empty</h4>
-                    <p>
+                <h1 style="text-align: center; font-family: 'Roboto Slab', cursive; font-size: 36px; font-weight: bold; color: #DF3770;">Shopping Cart is Empty</h1>
                     <p style="text-align: center;"><a class="btn btn-primary btn-md" href="results.jsp?keyword=" role="button">Continue Shopping</a></p>
-                    </p>
                     <%
                     } else {
                     %>
@@ -73,10 +71,8 @@
                             int itemCount = items.size();
                             if (itemCount == 0) {
                         %>
-                        <h1 class="cart-title">Shopping Cart is Empty</h4>
-                            <p>
-                            <p style="text-align: center;"><a class="btn btn-primary btn-md" href="results.jsp?keyword=" role="button">Continue Shopping</a></p>
-                            </p>
+                        <h1 style="text-align: center; font-family: 'Roboto Slab', cursive; font-size: 36px; font-weight: bold; color: #DF3770;">Shopping Cart is Empty</h1>
+                    <p style="text-align: center;"><a class="btn btn-primary btn-md" href="results.jsp?keyword=" role="button">Continue Shopping</a></p>
                             <%
                                 }
                                 if (cart.getItemCount() != 0) {
@@ -107,9 +103,9 @@
                                     <p class="col-md-2"><%= item.getTitle()%></p>
                                     <p class="col-md-2"><%= item.getAuthor()%></p>
                                     <p class="col-md-2">
-                                        <i class="material-icons button" onClick="increaseQuantity('item<%= i%>')">add_circle_outline</i>
+                                        <i style="font-size: 30px;" class="material-icons button" onClick="increaseQuantity('item<%= i%>')">add_circle_outline</i>
                                         <input type="text" size="2" name="item<%= i%>" id="item<%= i%>" value="<%= item.getQuantity()%>" readonly="readonly" />
-                                        <i class="material-icons button" onClick="decreaseQuantity('item<%= i%>')">remove_circle_outline</i>
+                                        <i style="font-size: 30px;" class="material-icons button" onClick="decreaseQuantity('item<%= i%>')">remove_circle_outline</i>
                                         <!--<i class="material-icons-outlined button" onClick="removeItem('item0')">delete</i>-->
                                     </p>
                                     <p class="col-md-2">$<%= item.getPrice()%></p>
