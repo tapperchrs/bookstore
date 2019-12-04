@@ -107,7 +107,7 @@
                     </div>
                 </form>
                 <div class="col-lg-12">
-                    <p style="text-align: center; margin-top: 20px;" class="cart-title col-lg-12"><a onClick="document.forms[0].submit(), thankYou()" class="button btn btn-primary btn-lg">Confirm Order</a></p>            
+                    <p style="text-align: center; margin-top: 20px;" class="cart-title col-lg-12"><a onClick="document.forms[0].submit(), thankYou()" class="button btn btn-primary btn-lg" href="index.jsp">Confirm Order</a></p>            
                 </div>
             </div>
         </div>

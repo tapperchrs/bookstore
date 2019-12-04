@@ -48,8 +48,8 @@
                     <h2 class="col-lg-12" id="weight">Book Publisher: <i><%= rs.getString("pub_name")%></i></h2>
                     <div class="col-lg-12 btns">
                         <div class="col-md-12">
-                            <p><a class="btn btn-primary col-md-6" href="checkout.jsp" role="button"><i class="material-icons">payment</i></a>
-                                <a class="btn btn-primary col-md-6" href="cart.jsp?isbn=<%=isbn%>" role="button"><i class="material-icons">add_shopping_cart</i></a>
+                            <p>
+                                <a style="margin-left: auto; margin-right: auto; display: block;" class="btn btn-primary col-md-6" href="cart.jsp?isbn=<%=isbn%>" role="button"><i class="material-icons">add_shopping_cart</i></a>
                             </p>
                         </div>                       </div>
                 </div>
