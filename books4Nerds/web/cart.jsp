@@ -3,10 +3,9 @@
     Created on : Oct 28, 2019, 1:27:33 PM
     Author     : 01792538
 --%>
-<%@page import="java.util.Vector"%>
-<%@page import="bookstoreUtils.Item"%>
-<%@page import="bookstoreUtils.ShoppingCart"%>
-<%@page import="java.sql.*, org.apache.derby.jdbc.*"%>
+<%@page import="java.util.*"%>
+<%@page import="bookstoreUtils.*"%>
+<%--<%@page import="java.sql.*, org.apache.derby.jdbc.*"%>--%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String itemParam = request.getParameter("isbn");
@@ -115,7 +114,7 @@
                         }
                         if (itemCount != 0) {
                     %>
-                    <p style="text-align: center; padding-top: 15px;"><a class="btn btn-primary btn-md" value='Update Cart' type="submit" role="button">Update Cart</a></p>
+                    <input class="button btn btn-primary btn-md" value='Update Cart' type="submit"/>
                     <p style="text-align: center;"><a class="btn btn-primary btn-md" href="cart.jsp?clear=true" role="button">Clear Cart</a></p>
                     <p style="text-align: center;"><a class="btn btn-primary btn-md" href="results.jsp?keyword=" role="button">Continue Shopping</a></p>
                     </p>
