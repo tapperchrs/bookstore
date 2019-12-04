@@ -5,8 +5,6 @@
  */
 package bookstoreUtils;
 
-import bookstoreUtils.Item;
-import bookstoreUtils.ShoppingCart;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -135,7 +133,7 @@ public class SubmitOrderServlet extends HttpServlet {
             response.sendRedirect("error.jsp?msg=" + ex.getMessage());
             return;
         }
-        response.sendRedirect("thankYou.jsp");
+        response.sendRedirect("index.jsp");
     }
 
     /**

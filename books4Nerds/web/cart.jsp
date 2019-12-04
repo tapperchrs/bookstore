@@ -114,7 +114,7 @@
                         }
                         if (itemCount != 0) {
                     %>
-                    <input class="button btn btn-primary btn-md" value='Update Cart' type="submit"/>
+                    <input style="margin-left: auto; margin-right: auto; display: block; margin-bottom: 10px; margin-top: 10px;" class="button btn btn-primary btn-md" value='Update Cart' type="submit"/>
                     <p style="text-align: center;"><a class="btn btn-primary btn-md" href="cart.jsp?clear=true" role="button">Clear Cart</a></p>
                     <p style="text-align: center;"><a class="btn btn-primary btn-md" href="results.jsp?keyword=" role="button">Continue Shopping</a></p>
                     </p>

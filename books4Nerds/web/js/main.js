@@ -20,3 +20,7 @@ function removeItem(item){
 function updateCart(){
     document.forms[0].submit();
 }
+
+function thankYou() {
+    var thanks = prompt("Thank You for Purchasing from Books 4 Nerds. Please let us know what you'd rate our service.", "0-10");
+}
