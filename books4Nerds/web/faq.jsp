@@ -22,7 +22,7 @@
             <div class="container">
                 <h1>Frequently Asked Questions</h1>
                 <h2>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</h2>
-                <p><a class="btn btn-primary btn-lg" href="contact.html" role="button">Contact/About Us</a></p>            
+                <p><a class="btn btn-primary btn-lg" href="contact.jsp" role="button">Contact/About Us</a></p>            
             </div>
 
             <br>
