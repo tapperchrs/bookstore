@@ -76,15 +76,16 @@
                 </h1>
                 <%
                     String category = rs.getString("category");
-                    ResultSet rg = stmt.executeQuery("select * from booksquery where category = '" + category + "' fetch first 4 rows only");
+                    ResultSet rg = stmt.executeQuery("select * from booksquery where category = '" + category + "' and '" + rs.getString("isbn") + "' != isbn fetch first 4 rows only");
                     while (rg.next()) {
                 %>
                 <div class="col-lg-3">
                     <a href="book.jsp?isbn=<%= rg.getString("isbn")%>">
                         <img src="<%= rg.getString("coverpic")%>" alt=""/>
-                    </a>
+                    
                     <p class="col-sm-12 subtitle"><%= rg.getString("title")%></p>
                     <p class="col-sm-12">Price: $<%= rg.getString("price")%></p>
+                    </a>
                 </div>
                 <%
                     }
