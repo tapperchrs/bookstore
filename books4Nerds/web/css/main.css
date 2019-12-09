@@ -722,12 +722,15 @@ div #review strong {
     padding-bottom: 20px;
 }
 .cart-checkout {
-    background-color: #222;
+    background-color: #FFF;
     width: 100%;
     margin: 0 auto;
     display: block;
+    
 }
-
+.cart-checkout .container{
+    border-bottom: 1px solid #3285DF
+}
 
 .cart-checkout h1 {
     font-family: 'Miniver', cursive;
@@ -741,11 +744,14 @@ div #review strong {
     text-align: center!important;
     font-family: 'Roboto Slab', serif;
     font-size: 16px!important;
-    color: #FFF;
+    color: #222;
 
 }
 .cart-checkout .subtitle{
     padding-top: 10px!important;
+}
+.cart-checkout .subtitle p {
+    color: #222;
 }
 #checkout .cart-checkout img {
     width: auto;
@@ -925,5 +931,19 @@ div #review strong {
     border-bottom: 1px solid #3285DF;
 }
 
+.check-total {
+    font-family: 'Roboto Slab', cursive; 
+    font-size: 18px; 
+    font-weight: normal; 
+    text-align: center; 
+    color: #222;
+}
+.check-total-2 {
+    font-family: 'Roboto Slab', cursive; 
+    font-size: 20px; 
+    font-weight: bold; 
+    text-align: center; 
+    color: #222;
+}
 
 

@@ -4,12 +4,14 @@
     Author     : 01792538
 --%>
 
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="java.util.*"%>
 <%@page import="bookstoreUtils.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String itemParam = request.getParameter("isbn");
     String clearParam = request.getParameter("clear");
+    DecimalFormat df = new DecimalFormat("0.00");
     ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
     if (itemParam != null) {
         Item item = new Item(itemParam);
@@ -59,8 +61,19 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div id="checkout">
             <div class="cart-checkout">
-                <div class="container">                
-                    <h2 style="font-family: 'Roboto Slab', cursive; font-size: 30px; font-weight: bold; text-align: center; color: #FFF;">Total: <%=cart.getStringTotal()%></h2>
+                <div class="container col-lg-12">     
+                    <%
+                        String tax = df.format(Math.floor(cart.getTotal() * .0635));
+                        Double total = cart.getTotal() + Double.valueOf(tax);
+                    %>
+                    <div class="col-lg-3">
+                    <h2 class="check-total" >Cost of Books: <%=cart.getStringTotal()%></h2>
+                    <h2 class="check-total" >Sales Tax: $<%=tax%></h2>
+                    <h2 class="check-total" >Shipping & Handling: FREE</h2>
+                    <h2 class="check-total-2" >Total Cost: $<%=df.format(total)%></h2>
+                    </div>
+
+                    <div class="col-lg-9">
                     <%
                         Vector items = cart.getCart();
                         int itemCount = items.size();
@@ -76,6 +89,7 @@
                     <%
                         }
                     %>
+                    </div>
                 </div>
             </div>
             <div class="container">
