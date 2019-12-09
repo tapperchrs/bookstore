@@ -516,6 +516,11 @@ div #review strong {
 .related .subtitle{
     padding-top: 20px!important;
 }
+.related .subtitle:hover {
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    color: #DF3770
+}
 .recommend {
     background-color: #FFF;
     width:100%;
