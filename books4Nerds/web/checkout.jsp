@@ -117,10 +117,9 @@
                             <option value="1">Visa</option>
                             <option value="6">IOU ;)</option>
                         </select>
-                        <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" required="required" class="form-control col-sm-5">
-                        <input type="text" placeholder="MM/YYYY" required="required" class="form-control col-sm-5">
-                        <input type="text" placeholder="###" required="required" class="form-control col-sm-5">
-                        <input type="text" placeholder="Name" required="required" class="form-control col-sm-5">
+                        <input type="text" name="CreditCard" placeholder="XXXX-XXXX-XXXX-XXXX" required="required" class="form-control col-sm-5">
+                        <input type="text" name="CardExpMo" placeholder="MM" required="required" class="form-control col-sm-5">
+                        <input type="text" name="CardExpYr" placeholder="YYYY" required="required" class="form-control col-sm-5">
                     </div>
                 </form>
                 <div class="col-lg-12">
