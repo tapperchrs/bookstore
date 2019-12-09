@@ -44,7 +44,7 @@
 
         <div class="container">
             <!-- Example row of columns -->
-            <div class="sort col-lg-12">
+<!--            <div class="sort col-lg-12">
                 <h1>Filter By:</h1>
                 <div class="col-sm-12 sorted">
                     
@@ -73,7 +73,7 @@
                         <option value="Publisher" placeholder="Publisher">Publisher</option>
                     </select>
                 </div>
-            </div>
+            </div>-->
             <div class="items col-md-12">
                 <h1 class="col-lg-12 results">Search Results</h1>
                 <%

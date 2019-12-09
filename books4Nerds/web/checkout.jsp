@@ -51,7 +51,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <a href="index.jsp">
-                        <img class="nav-img" src="images/B4N_MAIN_DF3770.png" alt=""/>
+                        <img class="nav-img" src="images/B4N_MAIN_3285DF.png" alt=""/>
                     </a>  
                 </div>
             </div><!--/.navbar-collapse -->
@@ -67,28 +67,28 @@
                         Double total = cart.getTotal() + Double.valueOf(tax);
                     %>
                     <div class="col-lg-3">
-                    <h2 class="check-total" >Cost of Books: <%=cart.getStringTotal()%></h2>
-                    <h2 class="check-total" >Sales Tax: $<%=tax%></h2>
-                    <h2 class="check-total" >Shipping & Handling: FREE</h2>
-                    <h2 class="check-total-2" >Total Cost: $<%=df.format(total)%></h2>
+                        <h2 class="check-total" >Cost of Books: <%=cart.getStringTotal()%></h2>
+                        <h2 class="check-total" >Sales Tax: $<%=tax%></h2>
+                        <h2 class="check-total" >Shipping & Handling: FREE</h2>
+                        <h2 class="check-total-2" >Total Cost: $<%=df.format(total)%></h2>
                     </div>
 
                     <div class="col-lg-9">
-                    <%
-                        Vector items = cart.getCart();
-                        int itemCount = items.size();
-                        for (int i = 0; i < itemCount; i++) {
-                            Item item = (Item) items.elementAt(i);
-                    %>
-                    <div class="col-lg-3">
-                        <img src="<%= item.getCoverpic()%>" alt=""/>
-                        <p class="col-sm-12 subtitle"><%= item.getTitle()%></p>
-                        <p class="col-sm-12">Quantity: <%= item.getQuantity()%></p>
-                        <p class="col-sm-12">Price per Book: $<%= item.getPrice()%></p>
-                    </div>
-                    <%
-                        }
-                    %>
+                        <%
+                            Vector items = cart.getCart();
+                            int itemCount = items.size();
+                            for (int i = 0; i < itemCount; i++) {
+                                Item item = (Item) items.elementAt(i);
+                        %>
+                        <div style="height:250px; width: 300px;" class="col-lg-3">
+                            <img src="<%= item.getCoverpic()%>" alt=""/>
+                            <p class="col-sm-12 subtitle"><%= item.getTitle()%></p>
+                            <p class="col-sm-12">Quantity: <%= item.getQuantity()%></p>
+                            <p class="col-sm-12">Price per Book: $<%= item.getPrice()%></p>
+                        </div>
+                        <%
+                            }
+                        %>
                     </div>
                 </div>
             </div>
@@ -96,23 +96,26 @@
                 <form action="SubmitOrderServlet" method="post">
                     <div class="col-lg-6 check">
                         <h1 class="col-lg-12" >Shipping Information</h1>
-                        <input type="text" placeholder="First Name" required="required" class="form-control col-sm-5">
-                        <input type="text" placeholder="Last Name" required="required" class="form-control col-sm-5">
-                        <input type="text" placeholder="Email" required="required" class="form-control col-sm-5">
-                        <input type="text" placeholder="Street Address" required="required" class="form-control col-sm-5">
-                        <input type="text" placeholder="City" required="required" class="form-control col-sm-5">
-                        <input type="text" placeholder="State" required="required" class="form-control col-sm-5">
-                        <input type="text" placeholder="Country" required="required" class="form-control col-sm-5">
-                        <input type="text" placeholder="ZIP Code" required="required" class="form-control col-sm-5">
-                        <input type="text" placeholder="Phone Number" class="form-control col-sm-5">
-                        <input type="text" placeholder="Apt/Suite" class="form-control col-sm-5">
+                        <input type="text" name="FIRSTNAME" placeholder="First Name" required="required" class="form-control col-sm-5">
+                        <input type="text" name="LASTNAME" placeholder="Last Name" required="required" class="form-control col-sm-5">
+                        <input type="text" name="CUSTOMEREMAIL" placeholder="Email" required="required" class="form-control col-sm-5">
+                        <input type="text" name="SHIPADDRESS" placeholder="Street Address" required="required" class="form-control col-sm-5">
+                        <input type="text" name="SHIPCITY" placeholder="City" required="required" class="form-control col-sm-5">
+                        <input type="text" name="SHIPREGION" placeholder="State" required="required" class="form-control col-sm-5">
+
+                        <input type="text" name="SHIPPOSTALCODE" placeholder="ZIP Code" required="required" class="form-control col-sm-5">
+                        <input type="text" name="PHONE" placeholder="Phone Number" class="form-control col-sm-5">
+                        <input type="text" name="APT" placeholder="Apt/Suite" class="form-control col-sm-5">
                     </div>
                     <div class="col-lg-6 check">
                         <h1 class="col-lg-12" >Payment Information</h1>
                         <select size="1" name="CreditCardTypeID" style="margin-bottom: 5px;">
-                            <option selected value="3">American Express</option>
+                            <option selected value="0" disabled>Select the Card Type</option>
+                            
+                            <option value="3">American Express</option>
                             <option value="2">MasterCard</option>
                             <option value="1">Visa</option>
+                            <option value="6">IOU ;)</option>
                         </select>
                         <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" required="required" class="form-control col-sm-5">
                         <input type="text" placeholder="MM/YYYY" required="required" class="form-control col-sm-5">
