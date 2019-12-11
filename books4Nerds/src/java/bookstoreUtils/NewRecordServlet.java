@@ -13,12 +13,15 @@ import javax.servlet.http.*;
 
 import java.sql.*;
 import java.util.*;
+import javax.servlet.annotation.WebServlet;
 import org.apache.derby.jdbc.ClientDriver;
 
 /**
  *
  * @author tduffy
  */
+
+@WebServlet(name = "NewRecordServlet", urlPatterns = {"/NewRecordServlet"})
 public class NewRecordServlet extends HttpServlet {
 
     /**

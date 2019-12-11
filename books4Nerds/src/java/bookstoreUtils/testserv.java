@@ -7,25 +7,18 @@ package bookstoreUtils;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import org.apache.derby.jdbc.ClientDriver;
 
 /**
  *
- * @author 01792538
+ * @author 01048750
  */
-
-@WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
-public class LoginServlet extends HttpServlet {
+@WebServlet(name = "testserv", urlPatterns = {"/testserv"})
+public class testserv extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -44,10 +37,10 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet testserv</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet testserv at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -79,35 +72,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-        String user = request.getParameter("userId");
-        String password = request.getParameter("password");
-        Connection con = null;
-        Statement stmt;
-        ResultSet rs;
-        System.out.println("Test");
-        try{
-            String dbURI = "jdbc:derby://localhost:1527/bookstore";
-            DriverManager.registerDriver(new ClientDriver());
-            con = DriverManager.getConnection(dbURI);
-            stmt = con.createStatement();
-            String query = "select * from AdminUsers where UserName = '" + user + "' and Password = '" + password + "'";
-            rs = stmt.executeQuery(query);
-            if(rs.next()){
-                HttpSession session = request.getSession(true);
-                session.setAttribute("loggedIn", "true");
-                response.sendRedirect("admin/admin.jsp");
-                return;
-            }else{
-                response.sendRedirect("admin/admin.jsp");
-                return;
-            }
-        }catch(Exception e){
-            e.printStackTrace();
-            response.sendRedirect("admin/error.html");
-            return;
-        }
-
+        response.sendRedirect("Test");
     }
 
     /**
@@ -117,7 +82,7 @@ public class LoginServlet extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Log In Servlet";
+        return "Short description";
     }// </editor-fold>
 
 }
