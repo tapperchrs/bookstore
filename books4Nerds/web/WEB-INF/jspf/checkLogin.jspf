@@ -1,0 +1,8 @@
+<%
+if(session==null)
+    response.sendRedirect("/books4Nerds/admin/index.html");
+
+String loggedIn = (String)session.getAttribute("loggedIn");
+if(loggedIn == null || loggedIn != "true")
+    response.sendRedirect("/books4Nerds/admin/index.html");
+%>

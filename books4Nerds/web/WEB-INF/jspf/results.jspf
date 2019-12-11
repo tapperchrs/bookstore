@@ -1,0 +1,22 @@
+<%
+    int bookCount = 0;
+    while(rs.next()){
+%>
+<section>
+    <h3><%= rs.getString("title") %></h3>
+    <p class="thumbnail">
+        <a href="details.jsp?isbn=<%= rs.getString("isbn") %>"><img src="<%= rs.getString("coverpic") %>" alt=""/>
+        <i class="material-icons button">info_outline</i></a>
+        <a href="showCart.jsp?isbn=<%= rs.getString("isbn") %>"><i class="material-icons button">add_shopping_cart</i></a><br/>
+        $<%= rs.getString("price") %>
+    </p>
+    <p class="description">
+        <%= rs.getString("description") %>
+    </p>
+    <hr/>
+</section>
+<%
+        bookCount++;
+    }
+%>
+<p><%= bookCount %> Matches Found</p>

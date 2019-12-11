@@ -1,0 +1,7 @@
+<%@page import="java.sql.*,org.apache.derby.jdbc.*" %>
+<%
+   String dbURI = "jdbc:derby://localhost:1527/bookstore";
+    DriverManager.registerDriver(new ClientDriver());
+    Connection con = DriverManager.getConnection(dbURI);
+    Statement stmt = con.createStatement(); 
+%>

@@ -1,0 +1,20 @@
+                    <script type="text/javascript">
+                        getRandomTestimonial();
+                    </script>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->        
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <p>&copy; 2019<br/>The Bookstore<br/>188 Richards Avenue, Norwalk, CT 06854<br/>203-857-7000<br/><a href="mailto:support@thebookstore.com">support@thebookstore.com</a></p>
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+
+        
+</body>
+</html>

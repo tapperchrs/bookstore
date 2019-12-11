@@ -1,0 +1,7 @@
+<%
+    try{
+        con.close();
+    }catch(Exception exc){
+        
+    }
+%>

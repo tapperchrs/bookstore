@@ -62,6 +62,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        System.out.println("Logging in old get");
         processRequest(request, response);
     }
 
@@ -92,10 +93,10 @@ public class LoginServlet extends HttpServlet {
             if(rs.next()){
                 HttpSession session = request.getSession(true);
                 session.setAttribute("loggedIn", "true");
-                response.sendRedirect("admin/login.jsp");
+                response.sendRedirect("admin/admin.jsp");
                 return;
             }else{
-                response.sendRedirect("admin/login.jsp");
+                response.sendRedirect("admin/admin.jsp");
                 return;
             }
         }catch(Exception e){
